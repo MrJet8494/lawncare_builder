@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lawncare Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Lawncare Builder</h1>
+    <p>Select your grass type to get personalized lawn care recommendations:</p>
+
+    <div class="form-group">
+        <label for="grassSelect">Select Grass Type:</label>
+        <select id="grassSelect" class="form-control">
+            <option value="">--Choose Grass Type--</option>
+        </select>
+    </div>
+
+    <div id="recommendations" class="mt-4" style="display: none;">
+        <h3>Recommended Products</h3>
+        <div id="mower"></div>
+        <div id="weedwacker"></div>
+        <div id="fertilizer"></div>
+        <div id="herbicide"></div>
+        <div id="pesticide"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.get('/grass-types', function (data) {
+            data.forEach(function (grass) {
+                $('#grassSelect').append(new Option(grass.name, grass.id));
+            });
+        });
+
+        $('#grassSelect').change(function () {
+            const grassId = $(this).val();
+            if (grassId) {
+                $.get('/compatible-products', {grass_id: grassId}, function (data) {
+                    $('#recommendations').show();
+                    $('#mower').html(`<h4>Lawn Mower:</h4><p><a href="${data.mower.link}" target="_blank">${data.mower.name}</a> - ${data.mower.description}</p>`);
+                    $('#weedwacker').html(`<h4>Weedwacker:</h4><p><a href="${data.weedwacker.link}" target="_blank">${data.weedwacker.name}</a> - ${data.weedwacker.description}</p>`);
+                    $('#fertilizer').html(`<h4>Fertilizer:</h4><p><a href="${data.fertilizer.link}" target="_blank">${data.fertilizer.name}</a> - ${data.fertilizer.description}</p>`);
+                    $('#herbicide').html(`<h4>Herbicide:</h4><p><a href="${data.herbicide.link}" target="_blank">${data.herbicide.name}</a> - ${data.herbicide.description}</p>`);
+                    $('#pesticide').html(`<h4>Pesticide:</h4><p><a href="${data.pesticide.link}" target="_blank">${data.pesticide.name}</a> - ${data.pesticide.description}</p>`);
+                });
+            } else {
+                $('#recommendations').hide();
+            }
+        });
+    });
+</script>
+</body>
+</html>
