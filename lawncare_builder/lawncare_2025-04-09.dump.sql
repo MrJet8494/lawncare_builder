@@ -52,7 +52,7 @@ INSERT INTO "products" ("id","name","category","description") VALUES ('13','Scot
 INSERT INTO "products" ("id","name","category","description") VALUES ('14','Roundup Weed & Grass Killer','Herbicide','Kills weeds without harming Bahia or Zoysia grass.');
 INSERT INTO "products" ("id","name","category","description") VALUES ('15','Ortho Weed B Gon Herbicide','Herbicide','Safe for Centipede and Zoysia grass, kills broadleaf weeds.');
 INSERT INTO "products" ("id","name","category","description") VALUES ('16','Spectracide Weed Stop','Herbicide','Safe for Bermuda, prevents broadleaf weeds without harming grass.');
-INSERT INTO "products" ("id","name","category","description") VALUES ('17','Southern Ag 2,4-D Amine Weed Killer','Herbicide','Safe for St. Augustine, kills broadleaf weeds without harming grass.');
+INSERT INTO "products" ("id","name","category","description") VALUES ('17','Southern Ag Atrazine Weed Killer','Herbicide','Safe for St. Augustine.');
 INSERT INTO "products" ("id","name","category","description") VALUES ('18','Bonide Annual Tree & Shrub Insect Control','Pesticide','Controls pests on lawns and around trees, safe for Zoysia and Centipede.');
 INSERT INTO "products" ("id","name","category","description") VALUES ('19','Spectracide Triazicide Insect Killer','Pesticide','Effective for lawn insects, ideal for Bahia grass.');
 INSERT INTO "products" ("id","name","category","description") VALUES ('20','Sevin Insect Killer','Pesticide','Safe for St. Augustine and Bermuda, kills lawn pests.');

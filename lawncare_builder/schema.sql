@@ -52,7 +52,7 @@ INSERT INTO products (name, category, description) VALUES
 ('Roundup Weed & Grass Killer', 'Herbicide', 'Kills weeds without harming Bahia or Zoysia grass.'),
 ('Ortho Weed B Gon Herbicide', 'Herbicide', 'Safe for Centipede and Zoysia grass, kills broadleaf weeds.'),
 ('Spectracide Weed Stop', 'Herbicide', 'Safe for Bermuda, prevents broadleaf weeds without harming grass.'),
-('Southern Ag 2,4-D Amine Weed Killer', 'Herbicide', 'Safe for St. Augustine, kills broadleaf weeds without harming grass.'),
+('Southern Ag Atrazine Weed Killer','Herbicide','Safe for St. Augustine.'),
 -- Pesticides
 ('Bonide Annual Tree & Shrub Insect Control', 'Pesticide', 'Controls pests on lawns and around trees, safe for Zoysia and Centipede.'),
 ('Spectracide Triazicide Insect Killer', 'Pesticide', 'Effective for lawn insects, ideal for Bahia grass.'),
@@ -87,7 +87,7 @@ INSERT INTO product_compatibility (product_id, grass_id) VALUES
 (14, 2), (14, 3), (14, 4),  -- Roundup for Bahia, Bermuda, Zoysia
 (15, 5), (15, 4),  -- Ortho Weed B Gon for Centipede, Zoysia
 (16, 3),  -- Spectracide for Bermuda
-(17, 1),  -- Southern Ag 2,4-D for St. Augustine
+(17, 1),  -- Southern Ag Atrazine Weed Killer for St. Augustine
 
 -- Pesticides
 (18, 4), (18, 5),  -- Bonide for Zoysia, Centipede
