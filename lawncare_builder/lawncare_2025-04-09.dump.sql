@@ -7,6 +7,13 @@
 BEGIN TRANSACTION;
 
 ----
+-- Drop tables if they exist
+----
+DROP TABLE IF EXISTS grasses;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS product_compatibility;
+
+----
 -- Table structure for grasses
 ----
 CREATE TABLE grasses (
